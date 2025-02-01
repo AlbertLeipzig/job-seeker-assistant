@@ -45,11 +45,8 @@ export interface ITech {
   amount: number;
 }
 
-export type TTheme = "light" | "dark";
 
 export interface IAppContext {
-  theme: TTheme;
-  setTheme: Dispatch<SetStateAction<TTheme>>;
   error: TError;
   setError: Dispatch<SetStateAction<TError>>;
   loading: TLoading;
