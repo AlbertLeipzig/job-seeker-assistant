@@ -1,5 +1,11 @@
 import { IPostingProps } from "../utils/types";
 
+/* 
+by updating the notes, a NotesContainer modal should open, where:
+    - every note is displayed, with date and text
+    - new notes can be added, but not deleted nor updated
+*/
+
 export const SingleListEntry = ({ posting }: IPostingProps) => {
   const {
     id,
