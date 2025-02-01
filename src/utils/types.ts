@@ -1,16 +1,5 @@
 import { SetStateAction, Dispatch } from "react";
 
-export interface IApplication {
-  id: string;
-  title: string;
-  link: string;
-  techStack: string[];
-  contactPerson: string;
-  company: string;
-  date: Date;
-  feedback: IPosting[];
-}
-
 export interface ICompany {
   name: string;
   site: string;
@@ -33,10 +22,18 @@ export interface IPerson {
 
 export interface IPosting {
   id: string;
+  title: string;
+  link: string;
+  techStack: string[];
   company: string;
   date: Date;
-  contactPerson: string;
+  contactPerson:IPerson;
   feedbackNotes: INote[];
+  applied: boolean;
+}
+
+export interface IPostingProps {
+  posting: IPosting;
 }
 
 export interface ITech {
@@ -45,14 +42,11 @@ export interface ITech {
   amount: number;
 }
 
-
 export interface IAppContext {
   error: TError;
   setError: Dispatch<SetStateAction<TError>>;
   loading: TLoading;
   setLoading: Dispatch<SetStateAction<TLoading>>;
-  applications: null | IApplication[];
-  setApplications: Dispatch<SetStateAction<null | IApplication[]>>;
   postings: null | IPosting[];
   setPostings: Dispatch<SetStateAction<null | IPosting[]>>;
   techs: null | ITech[];
