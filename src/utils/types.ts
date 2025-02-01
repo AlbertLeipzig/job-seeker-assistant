@@ -20,6 +20,11 @@ export interface IPerson {
   email: string;
 }
 
+export interface ICurriculumContent {
+  type: "heading" | "subheading" | "list" | "image";
+  value: string;
+}
+
 export interface IPosting {
   id: string;
   title: string;
@@ -27,9 +32,10 @@ export interface IPosting {
   techStack: string[];
   company: string;
   date: Date;
-  contactPerson:IPerson;
+  contactPerson: IPerson;
   feedbackNotes: INote[];
   applied: boolean;
+  coverLetter: string[];
 }
 
 export interface IPostingProps {
