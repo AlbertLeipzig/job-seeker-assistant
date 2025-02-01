@@ -1,0 +1,29 @@
+@use "./baseValues" as *;
+@use "./mixins" as *;
+@use "./colors" as *;
+
+// theme.scss
+
+/* 
+Primary: Main brand or action color (e.g., for buttons).
+Secondary: Supporting color, often used for less prominent elements.
+Accent: Used sparingly to highlight important elements or add contrast.
+Background: Color used for large areas, usually neutral.
+Text: Colors applied to typography (e.g., "Body Text" or "Headline Text").
+Border: Used for outlines or dividers.
+Error/Warning/Success: For alerts or status messages (red/yellow/green).
+Disabled: Muted or grayed-out color for inactive elements.
+*/
+
+.theme {
+  &--dark {
+    @extend .theme;
+    color: $neutralLight;
+    background-color: $neutralDark;
+  }
+  &--light {
+    @extend .theme;
+    color: $neutralDark;
+    background-color: $neutralLight;
+  }
+}

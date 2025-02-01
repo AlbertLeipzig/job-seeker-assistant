@@ -1,0 +1,8 @@
+@use "../utils/theme" as *;
+
+header {
+  padding: 3vh 3vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

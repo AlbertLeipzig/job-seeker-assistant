@@ -1,0 +1,28 @@
+@use "../utils/colors" as *;
+
+@mixin notification($textColor: $neutralDark) {
+  display: flex;
+  flex-direction: column;
+  background-color: $primaryColor;
+  padding: 0.5vh 2vw 2vh;
+  width: clamp(300px, 50vw, 750px);
+  margin: 25vh auto;
+  z-index: 100;
+
+  button {
+    padding: 0;
+    background: none;
+    border: none;
+    width: fit-content;
+    align-self: flex-end;
+  }
+  p {
+    color: $textColor;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+.notification {
+  @include notification;
+}

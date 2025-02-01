@@ -1,0 +1,20 @@
+@use "../utils/mixins" as *;
+@mixin nav($alignRight: false) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0 10px;
+    width: fit-content;
+    li {
+      margin: 1vh 0;
+      align-self: end;
+      a {
+        
+        border: none;
+      }
+    }
+  }
+}
+nav {
+  @include nav($alignRight: true);
+}

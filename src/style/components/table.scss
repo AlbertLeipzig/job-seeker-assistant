@@ -1,0 +1,52 @@
+@use "../utils/colors" as *;
+@mixin table(
+  $centered: false,
+  $centeredField: false,
+  $separators: false,
+  $background: false,
+  $color: $primaryColor
+) {
+  width: fit-content;
+  td,
+  th {
+    padding: 0 2vw;
+  }
+  caption {
+    text-align: center;
+    width: 100%;
+    padding: 0 2vw;
+  }
+
+  @if $centered {
+    margin: 0 auto;
+    display: block;
+  }
+  @if centeredField {
+    td,
+    th {
+      text-align: center;
+    }
+  }
+  @if $separators {
+  }
+  @if $background== odd {
+    caption {
+      background-color: $primaryColor;
+    }
+    tbody tr:nth-of-type(odd) {
+      background-color: $primaryColor;
+    }
+  }
+  @if $background == even {
+    thead {
+      background-color: $primaryColor;
+    }
+    tbody tr:nth-of-type(even) {
+      background-color: $primaryColor;
+    }
+  }
+}
+
+.table {
+  @include table($centered: true, $centeredField: true, $background: even);
+}

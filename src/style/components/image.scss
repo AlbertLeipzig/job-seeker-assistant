@@ -1,0 +1,33 @@
+// image : object-fit : cover
+// aspect-ratios : 1 || 3 / 4 || 9 / 16 || 2 / 3
+// border-radius : 50%
+
+@mixin image(
+  $width: 50vw,
+  $maxWidth: 350px,
+  $ratio: 1,
+  $cercle: false,
+  $centered: false
+) {
+  width: $width;
+  max-width: $maxWidth;
+  /* pre-defined: aspect-ratios  */
+  /* aspect-ratios  */
+  /* horizontal vs vertical  */
+  object-fit: cover;
+  @if $ratio {
+    aspect-ratio: $ratio;
+  }
+  @if $cercle {
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+  @if $centered {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+img {
+  @include image;
+}

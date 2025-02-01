@@ -1,0 +1,13 @@
+@use "./image" as *;
+section {
+  h2 {
+    margin-bottom: 1ch;
+  }
+  p {
+    margin: 3vh 0;
+  }
+  img {
+    @include image($maxWidth: 100%, $ratio: 4);
+    margin: 5vh 0;
+  }
+}

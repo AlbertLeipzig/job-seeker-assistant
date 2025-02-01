@@ -1,0 +1,53 @@
+@use "sass:map";
+@use "./colors" as *;
+@use "./fontFaces" as *;
+@use "./baseValues" as *;
+
+@mixin baseFont($color: $neutralDark) {
+  font-family: $fontFamily;
+  font-size: map.get($fontSizes, s);
+  max-width: 75ch;
+  line-height: 1.7em;
+  color: $color;
+}
+
+@mixin basicInteraction(
+  $colorPrimary: $neutralLight,
+  $colorSecondary: $neutralDark,
+  $colorTertiary: $primaryColor
+) {
+  transition: $transitionDuration;
+  border: 2px solid $colorSecondary;
+  &:hover {
+    color: $colorSecondary;
+    background-color: $colorPrimary;
+    border-color: $colorPrimary;
+  }
+  &:active {
+    color: $colorSecondary;
+    background-color: $colorPrimary;
+    border-color: $colorSecondary;
+  }
+  &:focus {
+    color: $colorSecondary;
+    background-color: $neutralDark;
+    border-color: $neutralDark;
+  }
+}
+
+@mixin button(
+  $colorPrimary: $neutralLight,
+  $colorSecondary: $primaryColor,
+  $colorTertiary: $neutralDark,
+  $centered: false
+) {
+  @include baseFont($colorPrimary);
+  @include basicInteraction($colorPrimary, $colorSecondary, $colorTertiary);
+  padding: 0.5em 1.5em;
+  border-radius: $borderRadius;
+  background-color: $colorSecondary;
+  @if $centered {
+    display: block;
+    margin: 0 auto;
+  }
+}

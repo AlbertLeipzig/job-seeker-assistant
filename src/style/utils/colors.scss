@@ -1,0 +1,7 @@
+@use "./baseValues" as *;
+
+$neutralLight: hsl(0 0% 93%);
+$neutralMedium: hsl(0 0% 45%);
+$neutralDark: hsl(0 0% 15%);
+$primaryColor: hsl($hue 47% 47%);
+$errorColor: crimson;

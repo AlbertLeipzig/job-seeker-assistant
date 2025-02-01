@@ -1,0 +1,63 @@
+@use "sass:map";
+@use "./colors" as *;
+@use "./fontFaces" as *;
+@use "./mixins" as *;
+@use "./baseValues" as *;
+
+h1 {
+  font-family: $fontFamily;
+  font-size: map.get($fontSizes, xl);
+  text-align: center;
+  /* color: $neutralDark; */
+  line-height: 1.1em;
+  margin-bottom: 3vh;
+}
+
+h2 {
+  font-family: $fontFamily;
+  font-size: map.get($fontSizes, l);
+  /* color: $neutralDark; */
+  line-height: 1.3em;
+}
+
+h3 {
+  font-family: $fontFamily;
+  font-size: map.get($fontSizes, m);
+  /* color: $neutralDark; */
+  line-height: 1.5em;
+}
+
+p {
+  @include baseFont;
+}
+
+a {
+  @include baseFont;
+  @include basicInteraction;
+  border-radius: $borderRadius;
+  padding: 0 1ch;
+}
+
+input {
+  @include baseFont;
+}
+
+label {
+  @include baseFont;
+}
+
+li {
+  @include baseFont;
+}
+
+caption {
+  @include baseFont;
+}
+
+th {
+  @include baseFont;
+}
+
+td {
+  @include baseFont;
+}
