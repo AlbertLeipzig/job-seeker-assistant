@@ -1,17 +1,20 @@
 import { NavLink } from "react-router-dom";
-import { ThemeButton } from "./ThemeButton";
 export const Header = () => {
   return (
     <header>
-      <NavLink to="/">Home</NavLink>
       <nav>
         <ul>
           <li>
-            <NavLink to=""></NavLink>
+            <NavLink to="/">New Postings</NavLink>
+          </li>
+          <li>
+            <NavLink to="/tracker">Application Process Tracker</NavLink>
+          </li>
+          <li>
+            <NavLink to="/statistics">Job Statistics</NavLink>
           </li>
         </ul>
       </nav>
-      <ThemeButton />
     </header>
   );
 };
