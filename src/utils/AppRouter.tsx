@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router";
 import { App } from "../App";
 import { ContactCompanyPage } from "../pages/ContactCompanyPage";
 import { CreateApplicationProcessTrackerPage } from "../pages/CreateApplicationProcessTrackerPage";
@@ -19,7 +19,7 @@ export const AppRouter = () => {
             path="tracker"
             element={<CreateApplicationProcessTrackerPage />}
           />
-          <Route path="editor" element={<DocumentsEditorPage />} />
+          <Route path="editor/:id" element={<DocumentsEditorPage />} />
           <Route path="statistics" element={<JobStatisticsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
