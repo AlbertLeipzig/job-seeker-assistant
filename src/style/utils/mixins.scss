@@ -3,7 +3,7 @@
 @use "./fontFaces" as *;
 @use "./baseValues" as *;
 
-@mixin baseFont($color: $neutralDark) {
+@mixin baseFont($color: $neutralLight) {
   font-family: $fontFamily;
   font-size: map.get($fontSizes, s);
   max-width: 75ch;
@@ -14,7 +14,7 @@
 @mixin basicInteraction(
   $colorPrimary: $neutralLight,
   $colorSecondary: $neutralDark,
-  $colorTertiary: $primaryColor
+  $colorTertiary: $neutralLight
 ) {
   transition: $transitionDuration;
   border: 2px solid $colorSecondary;
@@ -36,8 +36,8 @@
 }
 
 @mixin button(
-  $colorPrimary: $neutralLight,
-  $colorSecondary: $primaryColor,
+  $colorPrimary: $neutralDark,
+  $colorSecondary: $accentColor--light,
   $colorTertiary: $neutralDark,
   $centered: false
 ) {
