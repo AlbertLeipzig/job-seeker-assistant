@@ -13,7 +13,7 @@ export const CreateApplicationProcessTrackerPage = () => {
         postings.map((posting) => (
           <SingleListEntry posting={posting} key={posting.id} />
         ))}
-      <Link to="">Contact Company Page</Link>
+      <Link to="/">Contact Company Page</Link>
     </div>
   );
 };
