@@ -1,7 +1,9 @@
 @use "./baseValues" as *;
 
-$neutralLight: hsl(0 0% 93%);
-$neutralMedium: hsl(0 0% 45%);
-$neutralDark: hsl(0 0% 15%);
-$primaryColor: hsl($hue 47% 47%);
-$errorColor: crimson;
+$neutralLight: hsl(0, 0%, 95%);
+$neutralMedium: hsl(0, 0%, 64%);
+$neutralDark: hsl(0, 0%, 17%);
+$accentColor--dark: hsl(89, 47%, 40%);
+$accentColor--light: hsl(68, 100%, 37%);
+$alertColor: hsl(13, 73%, 42%);
+$alertColor--light: hsla(13, 73%, 55%, 0.8);
