@@ -1,22 +1,29 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { App } from "../App";
-import { ErrorPage } from "../pages/ErrorPage";
+import { ContactCompanyPage } from "../pages/ContactCompanyPage";
+import { CreateApplicationProcessTrackerPage } from "../pages/CreateApplicationProcessTrackerPage";
+import { DocumentsEditorPage } from "../pages/DocumentsEditorPage";
+import { JobStatisticsPage } from "../pages/JobStatisticsPage";
+import { NewPostingsPage } from "../pages/NewPostingsPage";
+/* import { ErrorPage } from "../pages/ErrorPage"; */
 import { NotFoundPage } from "../pages/NotFoundPage";
-import { LandingPage } from "../pages/LandingPage";
-export const AppRouter = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-    errorElement: <ErrorPage />,
-    children: [
-      {
-        path: "/",
-        element: <LandingPage />,
-      },
-      {
-        path: "*",
-        element: <NotFoundPage />,
-      },
-    ],
-  },
-]);
+
+export const AppRouter = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<App />}>
+          <Route index element={<NewPostingsPage />} />
+          <Route path="contact" element={<ContactCompanyPage />} />
+          <Route
+            path="tracker"
+            element={<CreateApplicationProcessTrackerPage />}
+          />
+          <Route path="editor" element={<DocumentsEditorPage />} />
+          <Route path="statistics" element={<JobStatisticsPage />} />
+          <Route path="*" element={<NotFoundPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
