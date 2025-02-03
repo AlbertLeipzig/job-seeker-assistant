@@ -30,7 +30,7 @@ export interface IDocument {
   content: string;
 }
 
-export interface IApplication extends Pick<IPosting, "email" | "application"> {}
+export interface IApplication extends Pick<IPosting, "contactPerson" | "application"> {}
 
 export interface IPosting {
   id: string;
@@ -41,7 +41,6 @@ export interface IPosting {
   date: Date;
   contactPerson: IPerson;
   feedbackNotes: INote[];
-  email: string;
   application: {
     subject: string;
     message: string;

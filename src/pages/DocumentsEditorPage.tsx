@@ -1,4 +1,5 @@
 import { useContext, useState, useEffect } from "react";
+import { Icons } from "../components/Icons";
 import { IDocument } from "../utils/types";
 import { Link, useParams } from "react-router";
 import { AppContext } from "../utils/AppContext";
@@ -68,9 +69,13 @@ export const DocumentsEditorPage = () => {
           >
             {activeDocument === "letter" ? "cover" : "letter"}
           </button>
-          <button onClick={discardChanges}>"Discard"</button>
-          <button onClick={saveDocumentChanges}>"Submit"</button>
-          <Link to={`/contact/${singlePosting.id}`}>Apply</Link>
+          <button onClick={discardChanges}>
+            <Icons.undo />
+          </button>
+          <button onClick={saveDocumentChanges}>
+            <Icons.ok />
+          </button>
+          <Link to={`/contact/${singlePosting.id}`}>Company Page</Link>
         </aside>
       )}
       {singlePosting && activeDocument === "letter" ? (

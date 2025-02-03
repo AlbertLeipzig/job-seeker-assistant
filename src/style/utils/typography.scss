@@ -8,7 +8,7 @@ h1 {
   font-family: $fontFamily;
   font-size: map.get($fontSizes, xl);
   text-align: center;
-  /* color: $neutralDark; */
+  color: $neutralLight;
   line-height: 1.1em;
   margin-bottom: 3vh;
 }
@@ -16,14 +16,14 @@ h1 {
 h2 {
   font-family: $fontFamily;
   font-size: map.get($fontSizes, l);
-  /* color: $neutralDark; */
+  color: $neutralLight;
   line-height: 1.3em;
 }
 
 h3 {
   font-family: $fontFamily;
   font-size: map.get($fontSizes, m);
-  /* color: $neutralDark; */
+  color: $neutralLight;
   line-height: 1.5em;
 }
 
@@ -35,7 +35,9 @@ a {
   @include baseFont;
   @include basicInteraction;
   border-radius: $borderRadius;
-  padding: 0 1ch;
+  padding: 0.5em 1em;
+  /* background-color: orange; */
+  color : rosybrown;
 }
 
 input {

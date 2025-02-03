@@ -1,4 +1,5 @@
 import { IPostingProps } from "../utils/types";
+import { Icons } from "./Icons";
 
 /* 
 by updating the notes, a NotesContainer modal should open, where:
@@ -16,7 +17,7 @@ export const SingleListEntry = ({ posting }: IPostingProps) => {
     date,
     contactPerson,
     feedbackNotes,
-    applied,
+    application,
   } = posting;
 
   return (
@@ -26,17 +27,23 @@ export const SingleListEntry = ({ posting }: IPostingProps) => {
       <p>{techStack}</p>
       <p>{JSON.stringify(date)}</p>
       <a>{link}</a>
-      {applied ? (
+      {application.coverLetter ? (
         <>
           <a href={`${contactPerson.email}`}>
-            {contactPerson.firstName} {contactPerson.lastName}
+            <Icons.feedback />
           </a>
-          <p>"Feedback Notes"</p>
+          <p>
+            <Icons.notes />
+          </p>
         </>
       ) : (
-        <p>"apply"</p>
+        <p>
+          <Icons.ok />
+        </p>
       )}
-      <p>"delete"</p>
+      <p>
+        <Icons.delete />
+      </p>
     </div>
   );
 };

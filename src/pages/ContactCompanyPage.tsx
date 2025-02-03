@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect } from "react";
+import { Icons } from "../components/Icons";
 import { AppContext } from "../utils/AppContext";
 import { useParams, Link } from "react-router";
 import { IApplication } from "../utils/types";
@@ -47,14 +48,14 @@ export const ContactCompanyPage = () => {
       <h1>Contact Company</h1>
       {singlePosting ? (
         <form>
-          <input type="text" placeholder={singlePosting.email} />
+          <input type="text" placeholder={singlePosting.contactPerson.email} />
           <input type="text" placeholder={singlePosting.application.subject} />
           <div>
             <button onClick={() => setShowPreview("coverLetter")}>
-              Cover Letter
+              Cover Letter <Icons.eye />
             </button>
             <button onClick={() => setShowPreview("curriculum")}>
-              Curriculum
+              Curriculum <Icons.eye />
             </button>
           </div>
           <div className="contact-company-page__preview-modal">
@@ -64,13 +65,15 @@ export const ContactCompanyPage = () => {
                   showPreview === "coverLetter" ? "coverLetter" : "curriculum"
                 ]
               )}
-            <Link to={`editor/${id}`}>"Document Editor"</Link>
+            <Link to={`editor/${id}`}>
+              <Icons.link2 />
+            </Link>
             <button
               onClick={() => {
                 setShowPreview(null);
               }}
             >
-              "Close"
+              <Icons.close />
             </button>
           </div>
           <textarea placeholder={singlePosting.application.message}></textarea>

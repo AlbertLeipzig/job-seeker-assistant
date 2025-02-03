@@ -13,3 +13,7 @@ TODOS:
 - [ ] both CV and cover letter can be fine tuned
 - [ wip ] the user can discard the changes or accept them
 - [ X ] include a link to the ContactCompanyPage
+- [ X ] header
+- [ X ] button
+- [ X ] anchor tag | navLink
+- [ X ] add an active navLink style
