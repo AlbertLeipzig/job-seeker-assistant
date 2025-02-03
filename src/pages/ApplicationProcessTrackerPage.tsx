@@ -3,7 +3,7 @@ import { Link } from "react-router";
 import { AppContext } from "../utils/AppContext";
 import { SingleListEntry } from "../components/SingleListEntry";
 
-export const CreateApplicationProcessTrackerPage = () => {
+export const ApplicationProcessTrackerPage = () => {
   const { postings } = useContext(AppContext);
 
   return (
@@ -13,7 +13,7 @@ export const CreateApplicationProcessTrackerPage = () => {
         postings.map((posting) => (
           <SingleListEntry posting={posting} key={posting.id} />
         ))}
-      <Link to="/">Contact Company Page</Link>
+      <Link to="/contact">Contact Company Page</Link>
     </div>
   );
 };

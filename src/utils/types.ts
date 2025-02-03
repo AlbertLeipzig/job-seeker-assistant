@@ -25,6 +25,13 @@ export interface ICurriculumContent {
   value: string;
 }
 
+export interface IDocument {
+  id: string;
+  content: string;
+}
+
+export interface IApplication extends Pick<IPosting, "email" | "application"> {}
+
 export interface IPosting {
   id: string;
   title: string;
@@ -34,8 +41,13 @@ export interface IPosting {
   date: Date;
   contactPerson: IPerson;
   feedbackNotes: INote[];
-  applied: boolean;
-  coverLetter: string[];
+  email: string;
+  application: {
+    subject: string;
+    message: string;
+    coverLetter: IDocument[];
+    curriculum: IDocument[];
+  };
 }
 
 export interface IPostingProps {
