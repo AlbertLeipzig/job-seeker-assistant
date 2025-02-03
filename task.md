@@ -2,11 +2,6 @@ TODOS:
 
 <!-- Comming Next -->
 
-- [ ] header
-- [ ] button
-- [ ] anchor tag | navLink
-- [ ] add an active navLink style
-
 <!-- Need Testing -->
 
 - [ ] show the email, subject, attached documents and message
@@ -18,3 +13,7 @@ TODOS:
 - [ ] both CV and cover letter can be fine tuned
 - [ wip ] the user can discard the changes or accept them
 - [ X ] include a link to the ContactCompanyPage
+- [ X ] header
+- [ X ] button
+- [ X ] anchor tag | navLink
+- [ X ] add an active navLink style
