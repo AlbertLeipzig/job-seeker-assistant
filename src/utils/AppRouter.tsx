@@ -1,7 +1,7 @@
 import { Routes, Route, BrowserRouter } from "react-router";
 import { App } from "../App";
 import { ContactCompanyPage } from "../pages/ContactCompanyPage";
-import { CreateApplicationProcessTrackerPage } from "../pages/CreateApplicationProcessTrackerPage";
+import { ApplicationProcessTrackerPage } from "../pages/ApplicationProcessTrackerPage";
 import { DocumentsEditorPage } from "../pages/DocumentsEditorPage";
 import { JobStatisticsPage } from "../pages/JobStatisticsPage";
 import { NewPostingsPage } from "../pages/NewPostingsPage";
@@ -17,7 +17,7 @@ export const AppRouter = () => {
           <Route path="contact" element={<ContactCompanyPage />} />
           <Route
             path="tracker"
-            element={<CreateApplicationProcessTrackerPage />}
+            element={<ApplicationProcessTrackerPage />}
           />
           <Route path="editor/:id" element={<DocumentsEditorPage />} />
           <Route path="statistics" element={<JobStatisticsPage />} />
