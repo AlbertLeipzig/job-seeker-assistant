@@ -1,8 +1,17 @@
-@use "../utils/theme" as *;
+@use "../utils/colors" as *;
 
 header {
+  grid-area : header;
   padding: 3vh 3vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
+  background-color: $accentColor--dark;
+
+  nav {
+    ul {
+      display: flex;
+      gap: 0 1vw;
+    }
+  }
 }

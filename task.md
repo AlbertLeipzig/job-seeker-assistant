@@ -2,6 +2,11 @@ TODOS:
 
 <!-- Comming Next -->
 
+- [ ] header
+- [ ] button
+- [ ] anchor tag | navLink
+- [ ] add an active navLink style
+
 <!-- Need Testing -->
 
 - [ ] show the email, subject, attached documents and message

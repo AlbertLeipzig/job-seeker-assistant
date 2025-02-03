@@ -1,4 +1,7 @@
+@use "../utils/colors" as *;
+
 main {
   padding: 3vh 0;
-  
+  background-color: $neutralDark;
+  grid-area : main;
 }

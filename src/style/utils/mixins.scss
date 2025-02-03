@@ -17,28 +17,28 @@
   $colorTertiary: $neutralLight
 ) {
   transition: $transitionDuration;
-  border: 2px solid $colorSecondary;
+  border: 1px solid transparent;
   &:hover {
-    color: $colorSecondary;
+    color: $neutralDark;
     background-color: $colorPrimary;
-    border-color: $colorPrimary;
+    border: 1px solid $colorPrimary;
   }
   &:active {
     color: $colorSecondary;
-    background-color: $colorPrimary;
-    border-color: $colorSecondary;
+    background: hsl(0, 0%, 0%, 0.5);
+    border: 1px solid $neutralLight;
   }
   &:focus {
     color: $colorSecondary;
-    background-color: $neutralDark;
-    border-color: $neutralDark;
+    background: none;
+    border: 1px solid $neutralLight;
   }
 }
 
 @mixin button(
-  $colorPrimary: $neutralDark,
+  $colorPrimary: $neutralLight,
   $colorSecondary: $accentColor--light,
-  $colorTertiary: $neutralDark,
+  $colorTertiary: $neutralLight,
   $centered: false
 ) {
   @include baseFont($colorPrimary);

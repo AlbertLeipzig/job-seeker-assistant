@@ -47,7 +47,7 @@ export const ContactCompanyPage = () => {
       <h1>Contact Company</h1>
       {singlePosting ? (
         <form>
-          <input type="text" placeholder={singlePosting.email} />
+          <input type="text" placeholder={singlePosting.contactPerson.email} />
           <input type="text" placeholder={singlePosting.application.subject} />
           <div>
             <button onClick={() => setShowPreview("coverLetter")}>

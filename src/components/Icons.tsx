@@ -1,19 +1,35 @@
 import { SVGProps } from "react";
-import { TfiHome } from "react-icons/tfi";
-import { IoClose } from "react-icons/io5";
-import { MdOutlineArrowBackIosNew } from "react-icons/md";
-import { MdOutlineArrowForwardIos } from "react-icons/md";
-import { IoIosArrowDown } from "react-icons/io";
-import { BiSolidQuoteAltLeft, BiSolidQuoteAltRight } from "react-icons/bi";
+
+import {
+  MdRemoveRedEye,
+  MdCheck,
+  MdOutlineUTurnLeft,
+  MdOutlineAdd,
+  MdClear,
+  MdCreate,
+  MdDelete,
+  MdEditDocument,
+  MdOutlineFeedback,
+  MdOutlineInsertLink,
+  MdLink,
+} from "react-icons/md";
+import { FaCalendarAlt } from "react-icons/fa";
+import { TiArrowUnsorted } from "react-icons/ti";
 
 const iconsTable = {
-  arrowDown: IoIosArrowDown,
-  arrowLeft: MdOutlineArrowBackIosNew,
-  arrowRight: MdOutlineArrowForwardIos,
-  close: IoClose,
-  closeQuotation: BiSolidQuoteAltRight,
-  home: TfiHome,
-  openQuotation: BiSolidQuoteAltLeft,
+  calendar: FaCalendarAlt,
+  close: MdClear,
+  delete: MdDelete,
+  eye: MdRemoveRedEye,
+  feedback: MdOutlineFeedback,
+  link1: MdLink,
+  link2: MdOutlineInsertLink,
+  notes: MdEditDocument,
+  ok: MdCheck,
+  pencil: MdCreate,
+  plus: MdOutlineAdd,
+  sort: TiArrowUnsorted,
+  undo: MdOutlineUTurnLeft,
 };
 
 export const Icons = Object.entries(iconsTable).reduce(

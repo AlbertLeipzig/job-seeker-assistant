@@ -16,7 +16,7 @@ export const SingleListEntry = ({ posting }: IPostingProps) => {
     date,
     contactPerson,
     feedbackNotes,
-    applied,
+    application,
   } = posting;
 
   return (
@@ -26,7 +26,7 @@ export const SingleListEntry = ({ posting }: IPostingProps) => {
       <p>{techStack}</p>
       <p>{JSON.stringify(date)}</p>
       <a>{link}</a>
-      {applied ? (
+      {application.coverLetter ? (
         <>
           <a href={`${contactPerson.email}`}>
             {contactPerson.firstName} {contactPerson.lastName}
