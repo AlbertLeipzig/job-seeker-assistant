@@ -2,87 +2,107 @@ import { useState, useContext, useEffect } from "react";
 import { Icons } from "../components/Icons";
 import { AppContext } from "../utils/AppContext";
 import { useParams, Link } from "react-router";
-import { IApplication } from "../utils/types";
-
-/* 
-This comes from IPosting
-coverLetter: IDocument[];
-curriculum: IDocument[];
-email  : string;
-THIS TWO WILL COME FROM THE API
-subject : string;
-message : string
-*/
+import { IApplication, IPosting } from "../utils/types";
 
 export const ContactCompanyPage = () => {
-  const [applicationData, setApplicationData] = useState<IApplication>({
-    email: "",
-    application: {
-      subject: "",
-      message: "",
-      coverLetter: [],
-      curriculum: [],
+  const [formData, setFormData] = useState<IApplication>({
+    id: "",
+    subject: "",
+    message: "",
+    coverLetter: [],
+    curriculum: [],
+    contactPerson: {
+      firstName: "",
+      lastName: "",
+      email: "",
     },
+    feedbackNotes: [],
   });
-  const [showPreview, setShowPreview] = useState<
-    null | "curriculum" | "coverLetter"
-  >(null);
 
   const { id } = useParams();
-  const { postings } = useContext(AppContext);
+  const { applications } = useContext(AppContext);
 
-  const updateApplicationData = () => {};
-
-  const singlePosting = postings?.find((posting) => posting.id === id);
+  const singleApplication = applications?.find(
+    (application) => application.id === id
+  );
 
   useEffect(() => {
-    singlePosting &&
-      setApplicationData({
-        ...applicationData,
-        application: singlePosting.application,
-      });
-  }, []);
+    if (singleApplication) {
+      setFormData(singleApplication);
+    }
+  }, [singleApplication]);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log("Form submitted", formData);
+  };
+
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const [showPreview, setShowPreview] = useState<
+    "coverLetter" | "curriculum" | null
+  >(null);
 
   return (
     <div className="contact-company-page">
       <h1>Contact Company</h1>
-      {singlePosting ? (
-        <form>
-          <input type="text" placeholder={singlePosting.contactPerson.email} />
-          <input type="text" placeholder={singlePosting.application.subject} />
+      {singleApplication ? (
+        <form onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="email"
+            value={formData.contactPerson.email}
+            onChange={handleChange}
+            placeholder="Email"
+          />
+          <input
+            type="text"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+            placeholder="Subject"
+          />
           <div>
-            <button onClick={() => setShowPreview("coverLetter")}>
+            <button type="button" onClick={() => setShowPreview("coverLetter")}>
               Cover Letter <Icons.eye />
             </button>
-            <button onClick={() => setShowPreview("curriculum")}>
+            <button type="button" onClick={() => setShowPreview("curriculum")}>
               Curriculum <Icons.eye />
             </button>
           </div>
-          <div className="contact-company-page__preview-modal">
-            {showPreview &&
-              JSON.stringify(
-                singlePosting.application[
+          {showPreview && (
+            <div className="contact-company-page__preview-modal">
+              {JSON.stringify(
+                formData[
                   showPreview === "coverLetter" ? "coverLetter" : "curriculum"
                 ]
               )}
-            <Link to={`editor/${id}`}>
-              <Icons.link2 />
-            </Link>
-            <button
-              onClick={() => {
-                setShowPreview(null);
-              }}
-            >
-              <Icons.close />
-            </button>
-          </div>
-          <textarea placeholder={singlePosting.application.message}></textarea>
-          <button>Submit</button>
+              <Link to={`editor/${id}`}>
+                <Icons.link2 />
+              </Link>
+              <button type="button" onClick={() => setShowPreview(null)}>
+                <Icons.close />
+              </button>
+            </div>
+          )}
+          <textarea
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+            placeholder="Message"
+          ></textarea>
+          <button type="submit">Submit</button>
         </form>
       ) : (
-        <>
-          <h2>Posting Not found</h2>
-        </>
+        <h2>Posting Not found</h2>
       )}
     </div>
   );

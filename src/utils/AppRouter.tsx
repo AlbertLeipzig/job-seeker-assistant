@@ -5,6 +5,7 @@ import { ApplicationProcessTrackerPage } from "../pages/ApplicationProcessTracke
 import { DocumentsEditorPage } from "../pages/DocumentsEditorPage";
 import { JobStatisticsPage } from "../pages/JobStatisticsPage";
 import { NewPostingsPage } from "../pages/NewPostingsPage";
+import { GenerateDataPage } from "../pages/GenerateDataPage";
 /* import { ErrorPage } from "../pages/ErrorPage"; */
 import { NotFoundPage } from "../pages/NotFoundPage";
 
@@ -21,6 +22,7 @@ export const AppRouter = () => {
           />
           <Route path="editor/:id" element={<DocumentsEditorPage />} />
           <Route path="statistics" element={<JobStatisticsPage />} />
+          <Route path="generate" element={<GenerateDataPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>

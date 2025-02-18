@@ -10,21 +10,28 @@ export const DocumentsEditorPage = () => {
   const [activeDocument, setActiveDocument] = useState<"letter" | "cv" | null>(
     null
   );
-  const [coverLetter, setCoverLetter] = useState<IDocument[]>([]);
-  const [curriculum, setCurriculum] = useState<IDocument[]>([]);
+  const [formData, setFormData] = useState<{
+    coverLetter: IDocument[];
+    curriculum: IDocument[];
+  }>({
+    coverLetter: [],
+    curriculum: [],
+  });
 
   const { postings, setError, setLoading } = useContext(AppContext);
   const { id } = useParams();
 
-  const singlePosting = postings?.find((posting) => posting.id === id);
+  const singleApplication = postings?.find((posting) => posting.id === id);
 
   const updateCoverLetter = (e) => {
     console.log(e);
   };
 
   const discardChanges = () => {
-    setCoverLetter([]);
-    setCurriculum([]);
+    setFormData({
+      coverLetter: [],
+      curriculum: [],
+    });
   };
 
   const saveDocumentChanges = async () => {
@@ -32,7 +39,7 @@ export const DocumentsEditorPage = () => {
       setLoading(true);
       const response = await fetch(apiUrl, {
         method: "POST",
-        body: JSON.stringify(coverLetter),
+        body: JSON.stringify(formData.coverLetter),
       });
       if (response.status !== 200) {
         setError("something wrong happened");
@@ -53,9 +60,13 @@ export const DocumentsEditorPage = () => {
   };
 
   useEffect(() => {
-    singlePosting && setCoverLetter(singlePosting?.application.coverLetter);
-    singlePosting && setCurriculum(singlePosting?.application.curriculum);
-  }, []);
+    if (singlePosting) {
+      setFormData({
+        coverLetter: singleApplication.application.coverLetter,
+        curriculum: singleApplication.application.curriculum,
+      });
+    }
+  }, [singlePosting]);
 
   return (
     <div className="documents-editor-page">
@@ -81,7 +92,7 @@ export const DocumentsEditorPage = () => {
       {singlePosting && activeDocument === "letter" ? (
         <>
           <h2>Introduce cover letter content</h2>
-          {singlePosting.application.coverLetter.map((entry) => (
+          {formData.coverLetter.map((entry) => (
             <p
               key={entry.id}
               contentEditable
@@ -94,10 +105,9 @@ export const DocumentsEditorPage = () => {
       ) : activeDocument === "cv" ? (
         <section>
           <h2>Introduce CV Content </h2>
-          {singlePosting &&
-            singlePosting.application.curriculum.map((entry) => (
-              <p key={entry.id}>{entry.content}</p>
-            ))}
+          {formData.curriculum.map((entry) => (
+            <p key={entry.id}>{entry.content}</p>
+          ))}
         </section>
       ) : (
         <p>No Document Found</p>

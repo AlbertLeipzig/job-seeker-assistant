@@ -1,5 +1,6 @@
-import { IPostingProps } from "../utils/types";
+import { IEntryProps } from "../utils/types";
 import { Icons } from "./Icons";
+import { format } from "../utils/format";
 
 /* 
 by updating the notes, a NotesContainer modal should open, where:
@@ -7,43 +8,17 @@ by updating the notes, a NotesContainer modal should open, where:
     - new notes can be added, but not deleted nor updated
 */
 
-export const SingleListEntry = ({ posting }: IPostingProps) => {
-  const {
-    id,
-    title,
-    link,
-    techStack,
-    company,
-    date,
-    contactPerson,
-    feedbackNotes,
-    application,
-  } = posting;
-
+export const SingleListEntry = ({ entry }: IEntryProps) => {
   return (
     <div className="single-list-entry">
-      <p>{title}</p>
-      <p>{company}</p>
-      <p>{techStack}</p>
-      <p>{JSON.stringify(date)}</p>
-      <a>{link}</a>
-      {application.coverLetter ? (
-        <>
-          <a href={`${contactPerson.email}`}>
-            <Icons.feedback />
-          </a>
-          <p>
-            <Icons.notes />
-          </p>
-        </>
-      ) : (
-        <p>
-          <Icons.ok />
-        </p>
+      {"title" in entry && <h3>{entry.title}</h3>}
+      {"company" in entry && <p>{entry.company}</p>}
+      {"techStack" in entry && <Icons.eye className="single-list-entry__tech" />}
+      {"date" in entry && <p>{format.date(entry.date)}</p>}
+      {"link" in entry && (
+        <a className="single-list-entry__link">{<Icons.link1 />}</a>
       )}
-      <p>
-        <Icons.delete />
-      </p>
+      <Icons.delete className="single-list-entry__delete" />
     </div>
   );
 };

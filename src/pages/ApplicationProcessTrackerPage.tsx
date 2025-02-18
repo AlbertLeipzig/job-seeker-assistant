@@ -1,19 +1,38 @@
-import { useContext } from "react";
-import { Link } from "react-router";
+import { useContext, useEffect } from "react";
 import { AppContext } from "../utils/AppContext";
-import { SingleListEntry } from "../components/SingleListEntry";
+import { SingleApplicationEntry } from "../components/SingleApplicationEntry";
+import { request } from "../utils/requests";
+import { handleError } from "../utils/handleError";
 
 export const ApplicationProcessTrackerPage = () => {
-  const { postings } = useContext(AppContext);
+  const { applications, setApplications, setError, setLoading } =
+    useContext(AppContext);
+
+  useEffect(() => {
+    if (!applications || applications.length < 1) {
+      setLoading(true);
+      request
+        .get("application")
+        .then((data) => setApplications(data))
+        .catch((e) => setError(handleError(e)))
+        .finally(() => setLoading(false));
+    }
+  }, []);
 
   return (
     <div className="create-application-process-tracker-page">
       <h1>Application Process Tracker</h1>
-      {postings &&
-        postings.map((posting) => (
-          <SingleListEntry posting={posting} key={posting.id} />
-        ))}
-      <Link to="/contact">Contact Company Page</Link>
+      <div className="entries-container">
+        {/* {applications && <p>{JSON.stringify(applications)}</p>} */}
+
+        {applications &&
+          applications.map((application) => (
+            <SingleApplicationEntry
+              application={application}
+              key={application.id}
+            />
+          ))}
+      </div>
     </div>
   );
 };

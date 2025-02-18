@@ -5,6 +5,10 @@ export interface ICompany {
   site: string;
 }
 
+export interface ICompanyProps {
+  company: ICompany;
+}
+
 export type TError = null | string | Error;
 
 export type TLoading = boolean;
@@ -18,6 +22,7 @@ export interface IPerson {
   firstName: string;
   lastName: string;
   email: string;
+  linkedin: string;
 }
 
 export interface ICurriculumContent {
@@ -27,30 +32,54 @@ export interface ICurriculumContent {
 
 export interface IDocument {
   id: string;
+  name: string;
   content: string;
 }
 
-export interface IApplication extends Pick<IPosting, "contactPerson" | "application"> {}
+/* 
+ subject: String,
+      message: String,
+      coverLetter: { type: [documentSchema] },
+      curriculum: { type: [documentSchema] },
+      contactPerson: { type: Schema.Types.ObjectId, ref: "contactPersons" },
+      feedbackNotes: [noteSchema],
+*/
+
+/* 
+contactPerson: IPerson;
+*/
+
+export interface IApplication {
+  _id: string;
+  date: Date;
+  subject: string;
+  message: string;
+  coverLetter: IDocument[];
+  curriculum: IDocument[];
+  title: string;
+  link: string;
+  techStack: string[];
+  company: string;
+  contactPerson: IPerson;
+  feedbackNotes: INote[];
+}
 
 export interface IPosting {
-  id: string;
+  _id: string;
   title: string;
   link: string;
   techStack: string[];
   company: string;
   date: Date;
   contactPerson: IPerson;
-  feedbackNotes: INote[];
-  application: {
-    subject: string;
-    message: string;
-    coverLetter: IDocument[];
-    curriculum: IDocument[];
-  };
 }
 
-export interface IPostingProps {
-  posting: IPosting;
+/* export interface IApplication {
+
+} */
+
+export interface IEntryProps {
+  entry: IPosting | IApplication;
 }
 
 export interface ITech {
@@ -60,6 +89,8 @@ export interface ITech {
 }
 
 export interface IAppContext {
+  applications: null | IApplication[];
+  setApplications: Dispatch<SetStateAction<IApplication[] | null>>;
   error: TError;
   setError: Dispatch<SetStateAction<TError>>;
   loading: TLoading;

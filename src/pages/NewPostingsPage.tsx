@@ -7,10 +7,12 @@ export const NewPostingsPage = () => {
 
   return (
     <div className="new-postings-page">
-      {postings &&
-        postings.map((posting) => (
-          <SingleListEntry posting={posting} key={posting.id} />
-        ))}
+      <div className="entries-container">
+        {postings &&
+          postings.map((posting) => (
+            <SingleListEntry entry={posting} key={posting.id} />
+          ))}
+      </div>
     </div>
   );
 };

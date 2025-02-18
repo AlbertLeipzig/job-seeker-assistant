@@ -1,0 +1,419 @@
+[
+  {
+    "id": "dd61fcacebfae4f088b3be6c",
+    "title": "Aer aperiam tui tricesimus depraedor nam aranea.",
+    "link": "https://uncomfortable-impact.info",
+    "techStack": ["next", "express", "vitest", "sql", "node", "mongo"],
+    "company": "Schuster Inc",
+    "date": "2024-03-09T00:17:35.788Z",
+    "contactPerson": {
+      "firstName": "Rosalee",
+      "lastName": "Romaguera",
+      "email": "Mckenna35@hotmail.com"
+    }
+  },
+  {
+    "id": "c71cfd9bc07b2b0ac8f65bfe",
+    "title": "Voluptatum aspernatur textus ustulo dicta quam recusandae demitto.",
+    "link": "https://incomparable-lawmaker.com/",
+    "techStack": ["next", "docker", "rollup", "vitest"],
+    "company": "Bauch LLC",
+    "date": "2024-08-11T18:21:46.271Z",
+    "contactPerson": {
+      "firstName": "Floy",
+      "lastName": "King",
+      "email": "Connor_Adams@hotmail.com"
+    }
+  },
+  {
+    "id": "fdf1cfdfffc6deafed806f3b",
+    "title": "Aeneus crudelis tamdiu vulpes asperiores corroboro.",
+    "link": "https://bare-drug.net/",
+    "techStack": ["mongo", "react", "docker", "css", "vitest", "js", "ts"],
+    "company": "Murazik, Pfannerstill and Torphy",
+    "date": "2025-12-24T23:50:17.359Z",
+    "contactPerson": {
+      "firstName": "Otho",
+      "lastName": "Cormier",
+      "email": "Margaret_Maggio@yahoo.com"
+    }
+  },
+  {
+    "id": "ecdbf36a5f1c3a5fd84cbd1f",
+    "title": "Video blanditiis taceo saepe studio theologus bibo solum.",
+    "link": "https://classic-merit.info",
+    "techStack": ["vue", "sql", "react"],
+    "company": "Jones and Sons",
+    "date": "2025-08-02T08:11:34.898Z",
+    "contactPerson": {
+      "firstName": "Adriel",
+      "lastName": "Glover",
+      "email": "Nova.Cummerata@yahoo.com"
+    }
+  },
+  {
+    "id": "fedcce772ff13a8b6c526980",
+    "title": "Antea aveho annus campana rerum caecus certus perspiciatis.",
+    "link": "https://unimportant-humor.name/",
+    "techStack": ["css", "mongo", "html", "sql"],
+    "company": "Donnelly - Harris",
+    "date": "2024-04-28T17:30:16.889Z",
+    "contactPerson": {
+      "firstName": "Lacey",
+      "lastName": "Beatty",
+      "email": "Bernie16@yahoo.com"
+    }
+  },
+  {
+    "id": "03dba0de89e12cefcfb6ecdd",
+    "title": "Crebro infit iure ustulo pel appositus aspicio vos.",
+    "link": "https://kooky-barge.name/",
+    "techStack": ["ts", "sql", "vitest", "next", "react"],
+    "company": "Mante and Sons",
+    "date": "2025-03-08T13:12:14.016Z",
+    "contactPerson": {
+      "firstName": "Linnea",
+      "lastName": "Bode",
+      "email": "Felton.Gusikowski43@gmail.com"
+    }
+  },
+  {
+    "id": "1d9ce35bc39e50ffa87dd7fc",
+    "title": "Canonicus advoco cura.",
+    "link": "https://repentant-bathrobe.net",
+    "techStack": ["vue", "vitest", "node", "express", "rollup"],
+    "company": "Stamm - Pollich",
+    "date": "2025-05-25T22:21:03.774Z",
+    "contactPerson": {
+      "firstName": "Bernice",
+      "lastName": "Kilback",
+      "email": "Theodora.Kuhlman36@yahoo.com"
+    }
+  },
+  {
+    "id": "d1fe7a3ccf1df6ce8dc09e4f",
+    "title": "Modi terminatio aestas arcus laboriosam degero theologus color.",
+    "link": "https://well-to-do-custody.org",
+    "techStack": ["vitest", "css", "react", "mongo", "html"],
+    "company": "Buckridge - Hayes",
+    "date": "2024-11-20T15:28:47.533Z",
+    "contactPerson": {
+      "firstName": "Adolf",
+      "lastName": "Spencer",
+      "email": "Kellie_Jaskolski@yahoo.com"
+    }
+  },
+  {
+    "id": "1da2d65e5abc97d06be799ff",
+    "title": "Venia cubo argentum adfectus tubineus eaque deorsum versus.",
+    "link": "https://light-fowl.info",
+    "techStack": ["vue", "sql", "vitest", "next", "js", "rollup"],
+    "company": "Koelpin, Kertzmann and Kuhn",
+    "date": "2025-04-03T08:17:39.897Z",
+    "contactPerson": {
+      "firstName": "Ryley",
+      "lastName": "Bergstrom",
+      "email": "Vivienne19@hotmail.com"
+    }
+  },
+  {
+    "id": "cdddba841f5dbebb7a61708c",
+    "title": "Odio vociferor titulus via animadverto velut vulnero.",
+    "link": "https://vivid-harp.info/",
+    "techStack": [],
+    "company": "Johnson, Wehner and Boyer",
+    "date": "2024-12-22T13:54:35.935Z",
+    "contactPerson": {
+      "firstName": "Laurine",
+      "lastName": "Becker",
+      "email": "Dusty.Gibson10@yahoo.com"
+    }
+  },
+  {
+    "id": "30cf5b9a0ec7a2f2aeaec447",
+    "title": "Viduo quibusdam cursus repellendus agnosco vallum delibero.",
+    "link": "https://gifted-hoof.org/",
+    "techStack": [
+      "html",
+      "vitest",
+      "node",
+      "docker",
+      "react",
+      "js",
+      "vue",
+      "css"
+    ],
+    "company": "Blick - Kirlin",
+    "date": "2024-07-07T21:39:57.664Z",
+    "contactPerson": {
+      "firstName": "Molly",
+      "lastName": "Sawayn",
+      "email": "Wendy63@hotmail.com"
+    }
+  },
+  {
+    "id": "7d65b6ab27690ffd36bd5f2a",
+    "title": "Aiunt fugiat deludo vita.",
+    "link": "https://delectable-goodwill.info/",
+    "techStack": ["next"],
+    "company": "Cummerata, Walter and Block",
+    "date": "2024-07-29T22:20:25.097Z",
+    "contactPerson": {
+      "firstName": "Melissa",
+      "lastName": "Parker",
+      "email": "Domenick.Romaguera@hotmail.com"
+    }
+  },
+  {
+    "id": "aad0124a45d544a66b57f7dc",
+    "title": "Timor spectaculum adipiscor.",
+    "link": "https://mixed-following.org/",
+    "techStack": ["express", "react", "next", "ts", "docker"],
+    "company": "Moore and Sons",
+    "date": "2025-06-21T06:42:24.600Z",
+    "contactPerson": {
+      "firstName": "Tomasa",
+      "lastName": "Kerluke",
+      "email": "Gussie.Heaney50@gmail.com"
+    }
+  },
+  {
+    "id": "db1cf75f61a1718bd9136cbd",
+    "title": "Ver sophismata commemoro dens ago villa.",
+    "link": "https://aggravating-feather.biz/",
+    "techStack": ["mongo", "next"],
+    "company": "Bartoletti, Daugherty and Harvey",
+    "date": "2024-05-25T06:47:06.950Z",
+    "contactPerson": {
+      "firstName": "Candelario",
+      "lastName": "Rutherford",
+      "email": "Kaelyn.Larson3@yahoo.com"
+    }
+  },
+  {
+    "id": "d2db3a8f7bddbbfb3eabfcf0",
+    "title": "Eaque acies spiritus tollo basium atque utroque quisquam sub assumenda.",
+    "link": "https://blond-goat.biz",
+    "techStack": [],
+    "company": "Hilpert, Steuber and Wintheiser",
+    "date": "2025-06-15T12:57:22.052Z",
+    "contactPerson": {
+      "firstName": "Keegan",
+      "lastName": "Heller",
+      "email": "Micah.Mohr52@gmail.com"
+    }
+  },
+  {
+    "id": "73e7cccdf7cbb4cdc50c7faf",
+    "title": "Video tenax ascit nobis vergo.",
+    "link": "https://snappy-scratch.biz",
+    "techStack": ["html"],
+    "company": "Kshlerin - Ebert",
+    "date": "2024-06-24T18:14:35.766Z",
+    "contactPerson": {
+      "firstName": "Donnell",
+      "lastName": "Kovacek",
+      "email": "Josefina_Mohr@yahoo.com"
+    }
+  },
+  {
+    "id": "c893fcd914b7dd0f8c6b8da2",
+    "title": "Uxor ciminatio cavus debilito caelestis aedificium civitas cuius aestus.",
+    "link": "https://everlasting-fund.com/",
+    "techStack": ["vitest", "express", "mongo", "react", "vue"],
+    "company": "Krajcik and Sons",
+    "date": "2025-11-12T15:36:57.174Z",
+    "contactPerson": {
+      "firstName": "Christophe",
+      "lastName": "Goyette",
+      "email": "Beulah18@gmail.com"
+    }
+  },
+  {
+    "id": "fcabecf57dca829caf9ab658",
+    "title": "Aestivus tepesco super ceno vito exercitationem magnam decet.",
+    "link": "https://heartfelt-discourse.name",
+    "techStack": ["css", "js", "sql", "vitest"],
+    "company": "DuBuque, Keebler and Schaden",
+    "date": "2025-02-28T20:55:03.132Z",
+    "contactPerson": {
+      "firstName": "Lilian",
+      "lastName": "Ward",
+      "email": "Lonie63@hotmail.com"
+    }
+  },
+  {
+    "id": "2b210693da4aabf8b2c11fc4",
+    "title": "Arbustum turba praesentium teneo uter sustineo adstringo.",
+    "link": "https://wavy-wafer.info/",
+    "techStack": ["js", "mongo", "vue", "node", "next"],
+    "company": "Smitham LLC",
+    "date": "2024-06-10T01:05:52.686Z",
+    "contactPerson": {
+      "firstName": "Gussie",
+      "lastName": "Ruecker",
+      "email": "Harrison_McDermott@yahoo.com"
+    }
+  },
+  {
+    "id": "bdb748dace931c5cf0f7cdf2",
+    "title": "Cinis certe adicio qui caecus volubilis pecto.",
+    "link": "https://old-defendant.org/",
+    "techStack": ["sql", "css", "node", "js", "react"],
+    "company": "Veum, Dicki and Ritchie",
+    "date": "2025-04-13T20:11:51.107Z",
+    "contactPerson": {
+      "firstName": "Dahlia",
+      "lastName": "Bosco-Morissette",
+      "email": "Hettie72@yahoo.com"
+    }
+  },
+  {
+    "id": "c19a5abedcbea7b214ae0151",
+    "title": "Vulgo deduco currus velociter canto.",
+    "link": "https://courteous-appliance.biz",
+    "techStack": ["next", "react", "rollup"],
+    "company": "Schiller Group",
+    "date": "2024-05-30T04:42:02.067Z",
+    "contactPerson": {
+      "firstName": "Zakary",
+      "lastName": "Cronin",
+      "email": "Giles_Herzog28@gmail.com"
+    }
+  },
+  {
+    "id": "5f350ee2ebc82a3af8a12d7c",
+    "title": "Assentator alter tondeo alioqui considero amplitudo ipsa.",
+    "link": "https://illiterate-chap.info/",
+    "techStack": ["vue", "sql", "mongo", "css", "express"],
+    "company": "Schneider - Lindgren",
+    "date": "2024-08-07T01:53:19.924Z",
+    "contactPerson": {
+      "firstName": "Arden",
+      "lastName": "Williamson",
+      "email": "Alice_Bechtelar@yahoo.com"
+    }
+  },
+  {
+    "id": "a36f8369e481f62bb9eeafd0",
+    "title": "Bonus audax aetas spectaculum victoria.",
+    "link": "https://puzzled-markup.info/",
+    "techStack": ["vue", "ts", "html", "mongo", "express"],
+    "company": "Von - Bailey",
+    "date": "2024-03-19T21:26:10.921Z",
+    "contactPerson": {
+      "firstName": "Waldo",
+      "lastName": "Mante",
+      "email": "Camila_Hodkiewicz40@yahoo.com"
+    }
+  },
+  {
+    "id": "e7da78ac0cdaf0fc1a62f441",
+    "title": "Charisma eaque utrimque tot necessitatibus.",
+    "link": "https://carefree-filter.info",
+    "techStack": ["js", "node", "mongo"],
+    "company": "Koch, Schneider and Witting",
+    "date": "2024-08-09T12:33:06.034Z",
+    "contactPerson": {
+      "firstName": "Emil",
+      "lastName": "Littel",
+      "email": "Clotilde.Metz@yahoo.com"
+    }
+  },
+  {
+    "id": "5e7f7f3b6f26ea8c91dd4fff",
+    "title": "Cauda spiculum verbera nihil terminatio ventosus cena depraedor astrum.",
+    "link": "https://narrow-guide.com/",
+    "techStack": [
+      "html",
+      "react",
+      "docker",
+      "js",
+      "vue",
+      "express",
+      "next",
+      "sql"
+    ],
+    "company": "Will LLC",
+    "date": "2024-08-12T04:53:32.942Z",
+    "contactPerson": {
+      "firstName": "Eloise",
+      "lastName": "Parker",
+      "email": "Mckenzie_Osinski71@hotmail.com"
+    }
+  },
+  {
+    "id": "0def5bc73ad4a3c8f63a7dbb",
+    "title": "Anser doloremque adamo consuasor denego thema coadunatio adsum vicinus.",
+    "link": "https://neglected-nudge.info",
+    "techStack": [
+      "node",
+      "vue",
+      "next",
+      "rollup",
+      "express",
+      "docker",
+      "html",
+      "react"
+    ],
+    "company": "Moen, Becker and Marvin",
+    "date": "2024-12-03T18:40:47.853Z",
+    "contactPerson": {
+      "firstName": "Leanna",
+      "lastName": "Wisoky",
+      "email": "Earline_Wintheiser15@gmail.com"
+    }
+  },
+  {
+    "id": "3559d6e7caebf318ba3b9d6c",
+    "title": "Damnatio reprehenderit canto agnosco.",
+    "link": "https://pointed-making.net/",
+    "techStack": [],
+    "company": "Runte, Mraz and Collins",
+    "date": "2025-09-16T14:26:55.488Z",
+    "contactPerson": {
+      "firstName": "Colt",
+      "lastName": "Dickens",
+      "email": "Fleta.Rutherford56@gmail.com"
+    }
+  },
+  {
+    "id": "c6ef8bacd4bea47f681d4c07",
+    "title": "Causa aufero vomica addo aptus.",
+    "link": "https://juvenile-final.biz/",
+    "techStack": ["sql", "vitest", "html", "next"],
+    "company": "Koss - Bins",
+    "date": "2024-06-28T17:52:20.609Z",
+    "contactPerson": {
+      "firstName": "Ollie",
+      "lastName": "Baumbach",
+      "email": "Boyd80@gmail.com"
+    }
+  },
+  {
+    "id": "3fec5eea9a4e893b9559cca1",
+    "title": "Cur cohors cariosus suggero cunabula curo vulgaris.",
+    "link": "https://measly-story.com",
+    "techStack": ["sql", "next", "vue"],
+    "company": "McCullough Group",
+    "date": "2026-01-18T14:00:08.311Z",
+    "contactPerson": {
+      "firstName": "Cloyd",
+      "lastName": "Armstrong",
+      "email": "Jalen52@gmail.com"
+    }
+  },
+  {
+    "id": "61e1fda83defefb9ecbb32eb",
+    "title": "Canis colligo valeo vorago vobis timidus.",
+    "link": "https://beneficial-wear.info/",
+    "techStack": ["ts", "css", "html", "node", "express", "rollup", "docker"],
+    "company": "Kunze and Sons",
+    "date": "2024-10-21T21:18:24.898Z",
+    "contactPerson": {
+      "firstName": "Wilma",
+      "lastName": "Leannon",
+      "email": "Leola27@hotmail.com"
+    }
+  }
+]
