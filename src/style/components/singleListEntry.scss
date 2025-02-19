@@ -1,5 +1,8 @@
 .single-list-entry {
-  outline: 1px solid red;
+  outline: 1px solid hsl(0, 50%, 33%);
+  background-color: hsl(0, 50%, 33%);
+  margin: .62vh 0;
+  padding : 5px 1.25vw;
   display: grid;
   grid-template-columns: 700px repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;

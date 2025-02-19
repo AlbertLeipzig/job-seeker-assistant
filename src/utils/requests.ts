@@ -1,3 +1,4 @@
+import { TRequestEndpoints } from "./types";
 /* const baseUrl = "/data"; */
 const baseUrl = "http://localhost:5000/api/v1";
 
@@ -8,7 +9,7 @@ const createApplication = async () => {
   }
 };
 
-const readData = async (endpoint: string) => {
+const readData = async (endpoint: TRequestEndpoints) => {
   try {
     if (!endpoint || typeof endpoint !== "string") {
       throw new Error("Please provide a valid endpoint");

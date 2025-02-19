@@ -3,7 +3,6 @@ import { AppContext } from "../utils/AppContext";
 import { request } from "../utils/requests";
 import { clean } from "../utils/cleanData";
 import { handleError } from "../utils/handleError";
-import { SinglePostingEntry } from "../components/SinglePostingEntry";
 import { SingleListEntry } from "../components/SingleListEntry";
 
 export const NewPostingsPage = () => {
@@ -22,6 +21,7 @@ export const NewPostingsPage = () => {
 
   return (
     <div className="new-postings-page">
+      <h1>New Postings</h1>
       <div className="entries-container">
         {postings &&
           postings.map((posting) => (

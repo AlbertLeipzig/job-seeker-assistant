@@ -1,6 +1,5 @@
 import { useContext, useEffect } from "react";
 import { AppContext } from "../utils/AppContext";
-import { SingleApplicationEntry } from "../components/SingleApplicationEntry";
 import {SingleListEntry} from "../components/SingleListEntry"
 import { request } from "../utils/requests";
 import { handleError } from "../utils/handleError";

@@ -1,5 +1,8 @@
 import { SetStateAction, Dispatch } from "react";
 
+/* export type TRequestEndpoints = "application" | "posting" | "techs"; */
+export type TRequestEndpoints = string;
+
 export interface ICompany {
   name: string;
   site: string;
