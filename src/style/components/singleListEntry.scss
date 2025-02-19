@@ -1,9 +1,14 @@
 .single-list-entry {
+  outline: 1px solid red;
   display: grid;
   grid-template-columns: 700px repeat(auto-fill, minmax(200px, 1fr));
   gap: 16px;
   justify-content: space-between;
   align-items: center;
+  h2 {
+    background-color: tomato;
+  }
+
   a {
     padding: 0;
   }

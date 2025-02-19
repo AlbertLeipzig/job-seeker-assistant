@@ -9,16 +9,37 @@ by updating the notes, a NotesContainer modal should open, where:
 */
 
 export const SingleListEntry = ({ entry }: IEntryProps) => {
+  const { title, link, techStack, company, date, contactPerson } = entry;
   return (
     <div className="single-list-entry">
-      {"title" in entry && <h3>{entry.title}</h3>}
-      {"company" in entry && <p>{entry.company}</p>}
-      {"techStack" in entry && <Icons.eye className="single-list-entry__tech" />}
-      {"date" in entry && <p>{format.date(entry.date)}</p>}
-      {"link" in entry && (
-        <a className="single-list-entry__link">{<Icons.link1 />}</a>
+      {/* <h2>{title}</h2> */}
+      {/* <p>{company}</p> */}
+      {/* {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer">
+            View Details
+          </a>
+        )} */}
+      <p>{format.date(date)}</p>
+      {techStack?.length > 0 && <p>Tech Stack:{techStack.join(", ")}</p>}
+      {/* {contactPerson && (
+          <p>
+            {contactPerson.firstName} {contactPerson.email}
+          </p>
+        )} */}
+      {"message" in entry && (
+        <p style={{ backgroundColor: "tomato" }}>Message: {entry.message}</p>
       )}
-      <Icons.delete className="single-list-entry__delete" />
+      {"coverLetter" in entry && (
+        <p style={{ outline: "1px solid yellow" }}>
+          Cover Letter: {entry.coverLetter.length} docs
+        </p>
+      )}
+      {/* {"curriculum" in entry && (
+          <p>Curriculum: {entry.curriculum.length} docs</p>
+        )} */}
+      {/* {"feedbackNotes" in entry && (
+          <p>Feedback Notes: {entry.feedbackNotes.length} notes</p>
+        )} */}
     </div>
   );
 };

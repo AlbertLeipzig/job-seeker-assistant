@@ -1,8 +1,10 @@
 import { useContext, useEffect } from "react";
 import { AppContext } from "../utils/AppContext";
 import { SingleApplicationEntry } from "../components/SingleApplicationEntry";
+import {SingleListEntry} from "../components/SingleListEntry"
 import { request } from "../utils/requests";
 import { handleError } from "../utils/handleError";
+import { clean } from "../utils/cleanData";
 
 export const ApplicationProcessTrackerPage = () => {
   const { applications, setApplications, setError, setLoading } =
@@ -13,7 +15,7 @@ export const ApplicationProcessTrackerPage = () => {
       setLoading(true);
       request
         .get("application")
-        .then((data) => setApplications(data))
+        .then((data) => setApplications(clean.applications(data)))
         .catch((e) => setError(handleError(e)))
         .finally(() => setLoading(false));
     }
@@ -23,13 +25,11 @@ export const ApplicationProcessTrackerPage = () => {
     <div className="create-application-process-tracker-page">
       <h1>Application Process Tracker</h1>
       <div className="entries-container">
-        {/* {applications && <p>{JSON.stringify(applications)}</p>} */}
-
         {applications &&
           applications.map((application) => (
-            <SingleApplicationEntry
-              application={application}
-              key={application.id}
+            <SingleListEntry
+              entry={application}
+              key={application._id}
             />
           ))}
       </div>
